@@ -16,8 +16,6 @@ html {
   --textsecondary: #555;
   --blue: #23a3fe;
   --skill-bg: #f8f9fa;
-  --portfolio-overlay: rgba(35,163,254,0.6);
-  --portfolio-info-bg: rgba(255,255,255,0.9);
   --menu-bg: rgba(0, 0, 0, 0.397);
 }
 .dark-theme {
@@ -26,8 +24,6 @@ html {
   --textsecondary: #ccc;
   --blue: #23a3fe;
   --skill-bg: rgba(255,255,255,0.05);
-  --portfolio-overlay: rgba(35,163,254,0.6);
-  --portfolio-info-bg: rgba(8,14,28,0.9);
   --menu-bg: rgb(255, 255, 255);
 }
 body{
@@ -204,12 +200,6 @@ section:nth-of-type(5){ animation-delay: 1.1s; }
   flex: 1 1 500px;
 }
 
-.about-content h3 {
-  color: var(--blue);
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
 .about-content p {
   color: var(--textwhite);
   line-height: 1.8;
@@ -266,56 +256,7 @@ section:nth-of-type(5){ animation-delay: 1.1s; }
     font-size: 0.9rem;
   }
 }
-/* ========== Portfolio Section ========== */
-.portfolio {
-  display: none;
-  background: var(--bgcolor);
-}
-.portfolio-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  width: 90%;
-  margin: auto;
-}
-.portfolio-item {
-  position: relative;
-  background: rgba(255,255,255,0.05);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-.portfolio-item:hover {
-  transform: translateY(-10px);
-}
-.portfolio-item img {
-  width: 100%;
-  display: block;
-}
-.portfolio-info {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  padding: 15px;
-  background: var(--skill-bg);
-  transition: 0.5s;
-}
-.portfolio-item:hover .portfolio-info {
-  bottom: 0;
-}
-.portfolio-info h3 {
-  margin-bottom: 10px;
-  color: var(--textwhite);
-}
-.portfolio-info p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--textsecondary);
-}
-
 /* ========== Skills Section ========== */
-/* ========== Skills Section (New Design) ========== */
 .skills {
   background: var(--bgcolor);
   padding: 80px 0;
@@ -492,21 +433,6 @@ section:nth-of-type(5){ animation-delay: 1.1s; }
   color: var(--textsecondary);
   line-height: 1.6;
 }
-
-/* Responsive */
-@media (max-width: 600px) {
-  .timeline {
-    border-left: none;
-    padding-left: 0;
-  }
-  .timeline-item {
-    padding-left: 0;
-  }
-  .timeline-dot {
-    display: none;
-  }
-}
-
 /* ========== Education Section ========== */
 .education{
   background: var(--bgcolor);
@@ -845,9 +771,6 @@ footer p{
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     padding: 0 20px;
   }
-  .portfolio-container{
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Extra Small Screens (Mobile <= 600px) */
@@ -881,9 +804,6 @@ footer p{
   .skills-container{
     grid-template-columns: 1fr;
     padding: 0 10px;
-  }
-  .portfolio-container{
-    grid-template-columns: 1fr;
   }
   .experience-container, .education-container ,.courses-container {
     grid-template-columns: 1fr;
